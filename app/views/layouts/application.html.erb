@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= content_for(:title) || "Del Campo A" %></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Favicon y manifiesto -->
+    <link rel="icon" href="<%= asset_path('favicon-32x32.png') %>" sizes="32x32" type="image/png">
+    <link rel="manifest" href="<%= asset_path('site.webmanifest') %>">
+
+    <!-- Hojas de estilo -->
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

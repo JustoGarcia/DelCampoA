@@ -1,0 +1,56 @@
+/* General */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .container {
+    text-align: center;
+  }
+  
+  .logo-image {
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  h1 {
+    color: #f1c40f;
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .button {
+    background-color: #f1c40f;
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #e1b307;
+    transform: scale(1.1);
+  }
+  
