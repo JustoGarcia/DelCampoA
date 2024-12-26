@@ -22,7 +22,7 @@
       <!-- Formulario de contacto -->
       <div class="contact-form" style="flex: 1; margin-right: 40px;"> <!-- Ajuste del margen entre el formulario y la imagen -->
         <h1>Contacto</h1>
-        <%= form_with model: @contact, url: contacts_path, local: true do |form| %>
+        <%= form_with url: contacts_path, local: true do |form| %>
           <div style="margin-bottom: 15px;">
             <%= form.text_field :name, placeholder: "Nombre", required: true, style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
           </div>
