@@ -30,6 +30,7 @@
       .product-description {
         flex: 1;
         margin-right: 20px;
+        text-align: left;
       }
       .product-image {
         flex: 1;
@@ -59,6 +60,9 @@
         text-decoration: none;
         border-radius: 5px;
       }
+      .product-description p:first-child {
+        font-weight: bold;
+      }
     </style>
   </head>
   <body>
@@ -75,146 +79,146 @@
       <h1>Productos</h1>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 1: Choclo peruano desgranado precocido congelado</p>
+          <p>Choclo peruano desgranado precocido congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% choclo peruano</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: Bolsas x 16oz (454gr) y 48oz (1360gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_1.png') %>" alt="Producto 1">
+          <img src="<%= asset_path('producto_1.png') %>" alt="Choclo peruano desgranado precocido congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 2: Mote precocido congelado</p>
+          <p>Mote precocido congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% maíz</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: Bolsas x 16oz (454gr) y 48oz (1360gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_2.png') %>" alt="Producto 2">
+          <img src="<%= asset_path('producto_2.png') %>" alt="Mote precocido congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 3: Yuca en trozos precocida congelada</p>
+          <p>Yuca en trozos precocida congelada</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% yuca</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: Bolsas x 16oz (454gr) (3-6 unidades por bolsa)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_3.png') %>" alt="Producto 3">
+          <img src="<%= asset_path('producto_3.png') %>" alt="Yuca en trozos precocida congelada">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 4: Ají amarillo entero congelado</p>
+          <p>Ají amarillo entero congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% ají amarillo</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 20 x 16oz (454gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_4.png') %>" alt="Producto 4">
+          <img src="<%= asset_path('producto_4.png') %>" alt="Ají amarillo entero congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 5: Ají amarillo despepitado congelado</p>
+          <p>Ají amarillo despepitado congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% ají amarillo</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 20 x 12oz (340gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_5.png') %>" alt="Producto 5">
+          <img src="<%= asset_path('producto_5.png') %>" alt="Ají amarillo despepitado congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 6: Rocoto entero congelado</p>
+          <p>Rocoto entero congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% rocoto</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: Bolsas x 16oz (454gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_6.png') %>" alt="Producto 6">
+          <img src="<%= asset_path('producto_6.png') %>" alt="Rocoto entero congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Producto 7: Ají limo entero congelado</p>
+          <p>Ají limo entero congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% ají limo</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: Bolsas x 14oz (397gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('producto_7.png') %>" alt="Producto 7">
+          <img src="<%= asset_path('producto_7.png') %>" alt="Ají limo entero congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Pulpa 1: Pulpa de mango congelado</p>
+          <p>Pulpa de mango congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% mango</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 12 x 14oz (397gr) y 12 x 16oz (454gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('pulpa_1.png') %>" alt="Pulpa 1">
+          <img src="<%= asset_path('pulpa_1.png') %>" alt="Pulpa de mango congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Pulpa 2: Pulpa de frutilla congelado</p>
+          <p>Pulpa de frutilla congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% frutilla</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 12 x 14oz (397gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('pulpa_2.png') %>" alt="Pulpa 2">
+          <img src="<%= asset_path('pulpa_2.png') %>" alt="Pulpa de frutilla congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Pulpa 3: Pulpa de maracuyá sin pepa congelado</p>
+          <p>Pulpa de maracuyá sin pepa congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% maracuyá</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 12 x 14oz (397gr) y 12 x 16oz (454gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('pulpa_3.png') %>" alt="Pulpa 3">
+          <img src="<%= asset_path('pulpa_3.png') %>" alt="Pulpa de maracuyá sin pepa congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Pulpa 4: Pulpa de lúcuma congelado</p>
+          <p>Pulpa de lúcuma congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% lúcuma</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 12 x 14oz (397gr) y 12 x 16oz (454gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('pulpa_4.png') %>" alt="Pulpa 4">
+          <img src="<%= asset_path('pulpa_4.png') %>" alt="Pulpa de lúcuma congelado">
         </div>
       </div>
       <div class="product-container">
         <div class="product-description">
-          <p>Pulpa 5: Pulpa de chirimoya congelado</p>
+          <p>Pulpa de chirimoya congelado</p>
           <p>Procedencia: Perú</p>
           <p>Ingredientes: 100% chirimoya</p>
           <p>Vida útil: 24 meses a -18°C</p>
           <p>Presentación: 12 x 16oz (454gr)</p>
         </div>
         <div class="product-image">
-          <img src="<%= asset_path('pulpa_5.png') %>" alt="Pulpa 5">
+          <img src="<%= asset_path('pulpa_5.png') %>" alt="Pulpa de chirimoya congelado">
         </div>
       </div>
     </div>
