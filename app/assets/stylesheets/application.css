@@ -119,3 +119,45 @@ p {
   transform: translateX(0);
   opacity: 1;
 }
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  html, body {
+    font-size: 14px; /* Ajusta el tamaño de la fuente para dispositivos móviles */
+  }
+
+  .logo-image {
+    max-width: 80px; /* Ajusta el tamaño del logo para dispositivos móviles */
+  }
+
+  .container {
+    padding: 10px; /* Añade padding para dispositivos móviles */
+  }
+
+  .buttons {
+    flex-direction: column; /* Cambia la dirección de los botones a columna en dispositivos móviles */
+    gap: 10px; /* Ajusta el espacio entre los botones */
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Ajusta el tamaño de la fuente para el título */
+  }
+
+  p {
+    font-size: 1rem; /* Ajusta el tamaño de la fuente para los párrafos */
+  }
+
+  .section-content {
+    flex-direction: column; /* Cambia la dirección del contenido a columna en dispositivos móviles */
+    padding: 10px; /* Ajusta el padding para dispositivos móviles */
+  }
+
+  .text-content, .image-content {
+    width: 100%; /* Asegura que el contenido ocupe todo el ancho disponible */
+    padding: 10px; /* Ajusta el padding para dispositivos móviles */
+  }
+
+  .content-image {
+    max-width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible */
+  }
+}
