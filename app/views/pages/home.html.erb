@@ -7,7 +7,15 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
-
+    <style>
+      /* Opcional: estiliza el desplazamiento suave */
+      html {
+        scroll-behavior: smooth;
+      }
+      h1, h2 {
+        color: #ffcc00; /* Color amarillo */
+      }
+    </style>
     <!-- Favicon e íconos -->
     <link rel="icon" type="image/x-icon" href="<%= asset_path('favicon.ico') %>">
     <link rel="icon" type="image/png" sizes="32x32" href="<%= asset_path('favicon-32x32.png') %>">
@@ -16,19 +24,94 @@
     <link rel="manifest" href="<%= asset_path('site.webmanifest') %>">
   </head>
   <body>
-    <div class="container">
-      <div class="logo">
+    <div class="container" style="min-height: 0; margin: 0 auto; padding: 0;">
+      <div id="top" class="logo">
         <img src="<%= asset_path('logazo.png') %>" alt="Logotipo" class="logo-image">
       </div>
       <div class="content">
-        <h1>Bienvenido a Del Campo A</h1>
-        <p>Una web simple, fluida y estética.</p>
-        <div class="buttons">
-          <a href="#" class="button">Inicio</a>
-          <a href="#" class="button">Contacto</a>
+        <h1>Del Campo Foods</h1>
+        <div class="buttons" style="text-align: center; margin-top: 20px;">
+          <a href="#top" class="button" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Inicio</a>
+          <a href="#contact" class="button" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Contáctanos</a>
         </div>
+      </div>
+      <div class="section-content" style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
+        <div class="text-content" style="flex: 1; text-align: left; color: #fff; margin: 20px; padding-right: 20px;">
+          <p>
+          Bienvenido a Del Campo Foods - Allpacuna, tu destino para productos alimenticios andinos auténticos. Sumérgete en nuestra amplia selección de sabores únicos y tradicionales que te transportarán a la región andina. ¡Descubre la auténtica cultura culinaria andina con nosotros!</p>
+        </div>
+        <div class="image-content" style="flex: 1.1; text-align: right;">
+          <img src="<%= asset_path('a0ab5bea0117449aba37d5dcaeed31ef.jpeg') %>" alt="Ejemplo" style="width: 100%; max-width: 1000px; height: auto; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+        </div>
+      </div>
+      <div class="about-section" style="margin-top: 40px; text-align: center; color: #fff;">
+        <h2>Acerca de Nosotros</h2>
+        <p style="margin: 20px auto; max-width: 700px;">
+          Con 24 años de experiencia en Estados Unidos, Del Campo Foods - Allpacuna se enorgullece de ofrecer alimentos étnicos de origen andino de la más alta calidad. Nuestro compromiso es brindar productos auténticos que resalten la riqueza culinaria andina. Estamos expandiendo nuestra presencia a Chile para acercar estos sabores únicos a más personas.
+        </p>
+        <div class="about-content" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; margin-top: 30px;">
+          <!-- Imagen de la bandera -->
+          <div style="flex: 1; text-align: center;">
+            <img src="<%= asset_path('bandera2.jpeg') %>" alt="Bandera" style="width: 90%; max-width: 600px; height: auto; border-radius: 10px;">
+          </div>
+          <!-- Imagen del plato -->
+          <div style="flex: 1; text-align: center;">
+            <img src="<%= asset_path('platako.jpeg') %>" alt="Plato" style="width: 90%; max-width: 600px; height: auto; border-radius: 10px;">
+          </div>
+        </div>
+      </div>
+      <div id="contact" class="contact-section" style="margin-top: 50px; text-align: center; color: #fff;">
+        <h2>Del Campo Foods - Allpacuna</h2>
+        
+        <!-- Números de contacto -->
+        <div style="margin: 20px;">
+          <p>
+            <span style="cursor: pointer;" onclick="copyToClipboard('+12392385045')">+1 (239) 238-5045</span><br>
+            <span style="cursor: pointer;" onclick="copyToClipboard('+56996090619')">+56 9 9609 0619</span>
+          </p>
+        </div>
+        
+        <!-- Correos -->
+        <div style="margin: 20px;">
+          <p>
+            <span style="cursor: pointer;" onclick="copyToClipboard('mrodriguez@delcampofoods.com')">mrodriguez@delcampofoods.com</span><br>
+            <span style="cursor: pointer;" onclick="copyToClipboard('jbettancourt@delcampofoods.com')">jbettancourt@delcampofoods.com</span>
+          </p>
+        </div>
+        
+        <!-- Dirección -->
+        <div style="margin: 20px;">
+          <p>
+            <a href="https://www.google.com/maps?q=Amapolas+1290,+Oficina+705,+Providencia,+Santiago+de+Chile" 
+               target="_blank" 
+               style="color: #ffcc00; text-decoration: none;">
+              Amapolas 1290, Oficina 705. Providencia, Santiago de Chile.
+            </a>
+          </p>
+        </div>
+        
+        <!-- Botón de contacto -->
+        <div style="margin: 30px;">
+          <a href="/contact" class="button" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Envíanos un mensaje</a>
+        </div>
+        
+        <!-- Derechos reservados -->
+        <footer style="margin-top: 30px; font-size: 14px; color: #ccc;">
+          &copy; 2024 Del Campo Foods - Allpacuna. Todos los derechos reservados.
+        </footer>
       </div>
     </div>
     <%= yield %>
+    
+    <!-- Script para copiar al portapapeles -->
+    <script>
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+          alert('Copiado al portapapeles: ' + text);
+        }, function(err) {
+          console.error('Error al copiar al portapapeles: ', err);
+        });
+      }
+    </script>
   </body>
 </html>

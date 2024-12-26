@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contacto - Del Campo A</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", type: "module", "data-turbo-track": "reload" %>
+  </head>
+  <body>
+    <!-- Logo y botón de volver -->
+    <div id="top" style="text-align: center; margin: 20px 0;">
+      <img src="<%= asset_path('logazo.png') %>" alt="Logotipo" style="max-width: 150px; height: auto;">
+      <div style="margin-top: 10px;">
+        <a href="/" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Volver</a>
+      </div>
+    </div>
+
+    <!-- Contenedor principal -->
+    <div class="container" style="display: flex; align-items: center; justify-content: space-between; margin: 50px auto; padding: 20px; max-width: 1200px;">
+      <!-- Formulario de contacto -->
+      <div style="flex: 1; margin-right: 40px;"> <!-- Ajuste del margen entre el formulario y la imagen -->
+        <h2>Contáctanos</h2>
+        <form action="/send_message" method="post" style="max-width: 600px; margin: 0 auto;">
+          <div style="margin-bottom: 15px;">
+            <input type="text" name="name" placeholder="Nombre" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <input type="email" name="email" placeholder="Correo Electrónico" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <input type="tel" name="phone" placeholder="Número de Teléfono" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+          </div>
+          <div style="margin-bottom: 15px;">
+            <textarea name="message" placeholder="Mensaje" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; height: 150px;"></textarea>
+          </div>
+          <div>
+            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #ffcc00; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Imagen -->
+      <div style="flex: 1; text-align: right;">
+        <img src="<%= asset_path('montanaz.jpeg') %>" alt="Montaña" style="width: 100%; max-width: 600px; height: auto; border-radius: 10px;">
+      </div>
+    </div>
+
+    <!-- Derechos reservados -->
+    <footer style="margin-top: 30px; font-size: 14px; color: #ccc; text-align: center;">
+      &copy; 2024 Del Campo Foods - Allpacuna. Todos los derechos reservados.
+    </footer>
+  </body>
+</html>

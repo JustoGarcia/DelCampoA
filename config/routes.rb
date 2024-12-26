@@ -14,4 +14,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  get 'contact', to: 'pages#contact'
+  post 'send_message', to: 'pages#send_message'
 end
