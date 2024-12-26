@@ -40,23 +40,23 @@
       <!-- Formulario de contacto -->
       <div class="contact-form" style="flex: 1; margin-right: 40px;"> <!-- Ajuste del margen entre el formulario y la imagen -->
         <h2>Contáctanos</h2>
-        <form action="/send_message" method="post" style="max-width: 600px; margin: 0 auto;">
+        <%= form_with model: Contact.new, url: contacts_path, local: true do |form| %>
           <div style="margin-bottom: 15px;">
-            <input type="text" name="name" placeholder="Nombre" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <%= form.text_field :name, placeholder: "Nombre", required: true, style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
           </div>
           <div style="margin-bottom: 15px;">
-            <input type="email" name="email" placeholder="Correo Electrónico" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <%= form.email_field :email, placeholder: "Correo Electrónico", required: true, style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
           </div>
           <div style="margin-bottom: 15px;">
-            <input type="tel" name="phone" placeholder="Número de Teléfono" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;">
+            <%= form.telephone_field :phone, placeholder: "Número de Teléfono", required: true, style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>
           </div>
           <div style="margin-bottom: 15px;">
-            <textarea name="message" placeholder="Mensaje" required style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; height: 150px;"></textarea>
+            <%= form.text_area :message, placeholder: "Mensaje", required: true, style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc; height: 150px;" %>
           </div>
           <div>
-            <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #ffcc00; border: none; border-radius: 5px; cursor: pointer;">Enviar</button>
+            <%= form.submit "Enviar", style: "padding: 10px 20px; font-size: 16px; background-color: #ffcc00; border: none; border-radius: 5px; cursor: pointer;" %>
           </div>
-        </form>
+        <% end %>
       </div>
 
       <!-- Imagen -->
