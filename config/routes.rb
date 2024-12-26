@@ -20,4 +20,7 @@ Rails.application.routes.draw do
 
   # Ruta para la página de contacto
   get 'contact', to: 'contacts#new'
+
+  # Ruta para la página de productos
+  get 'products', to: 'products#prodacts'
 end
