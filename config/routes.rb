@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   # Ruta para el formulario de contacto
   resources :contacts, only: [:new, :create]
 
+  # Ruta para la página de contacto
   get 'contact', to: 'pages#contact'
-  post 'send_message', to: 'pages#send_message'
 end

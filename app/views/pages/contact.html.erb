@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Contacto - Del Campo A</title>
+    <title>Contacto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -39,7 +39,7 @@
     <div class="container" style="display: flex; align-items: center; justify-content: space-between; margin: 50px auto; padding: 20px; max-width: 1200px;">
       <!-- Formulario de contacto -->
       <div class="contact-form" style="flex: 1; margin-right: 40px;"> <!-- Ajuste del margen entre el formulario y la imagen -->
-        <h2>Contáctanos</h2>
+        <h1>Contacto</h1>
         <%= form_with model: Contact.new, url: contacts_path, local: true do |form| %>
           <div style="margin-bottom: 15px;">
             <%= form.text_field :name, placeholder: "Nombre", required: true, style: "width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #ccc;" %>

@@ -1,10 +1,9 @@
 class ContactsController < ApplicationController
   def new
-    # Renderiza el formulario de contacto
+    @contact = Contact.new
   end
 
   def create
-    # Procesa los datos del formulario
     @contact = Contact.new(contact_params)
     if @contact.save
       redirect_to contact_path, notice: 'Mensaje enviado con éxito.'
