@@ -21,13 +21,14 @@
       .product-description {
         flex: 1;
         margin-right: 20px;
+        color: white;
       }
       .product-image {
         flex: 1;
         text-align: right;
       }
       .product-image img {
-        max-width: 100%;
+        max-width: 14.28%; /* 1/7 del tamaño original */
         height: auto;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -35,23 +36,21 @@
     </style>
   </head>
   <body>
-    <!-- Logo y botones de navegación -->
+    <!-- Logo y botón de volver -->
     <div id="top" style="text-align: center; margin: 20px 0;">
       <img src="<%= asset_path('logazo.png') %>" alt="Logotipo" style="max-width: 150px; height: auto;">
       <div style="margin-top: 10px;">
-        <a href="/" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Inicio</a>
-        <a href="/contact" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Contáctanos</a>
-        <a href="/products" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Productos</a>
+        <a href="/" style="padding: 10px 20px; background-color: #ffcc00; color: #000; text-decoration: none; border-radius: 5px;">Volver</a>
       </div>
     </div>
 
     <!-- Contenido principal -->
     <div class="container" style="margin: 50px auto; padding: 20px; max-width: 1200px;">
-      <h1>Productos</h1>
+      <h1 style="color: white;">Productos</h1>
       <% (1..7).each do |i| %>
         <div class="product-container">
           <div class="product-description">
-            <p>Descripción producto <%= i %>: ...</p>
+            <p>Ejemplo producto <%= i %>: ...</p>
           </div>
           <div class="product-image">
             <img src="<%= asset_path("producto_#{i}.png") %>" alt="Producto <%= i %>">
