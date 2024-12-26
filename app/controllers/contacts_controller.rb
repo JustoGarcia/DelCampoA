@@ -6,7 +6,7 @@ class ContactsController < ApplicationController
   def create
     @contact = Contact.new(contact_params)
     if @contact.save
-      redirect_to contact_path, notice: 'Mensaje enviado con éxito.'
+      redirect_to new_contact_path, notice: 'Mensaje enviado con éxito.'
     else
       render :new, alert: 'Hubo un error al enviar el mensaje.'
     end
