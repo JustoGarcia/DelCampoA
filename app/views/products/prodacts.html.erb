@@ -11,6 +11,13 @@
     <style>
       body {
         font-family: 'Montserrat', sans-serif;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+      }
+      .content {
+        flex: 1;
       }
       .product-container {
         display: flex;
@@ -33,6 +40,13 @@
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
       }
+      footer {
+        margin-top: auto;
+        font-size: 14px;
+        color: #ccc;
+        text-align: center;
+        padding: 10px 0;
+      }
     </style>
   </head>
   <body>
@@ -45,7 +59,7 @@
     </div>
 
     <!-- Contenido principal -->
-    <div class="container" style="margin: 50px auto; padding: 20px; max-width: 1200px;">
+    <div class="content container" style="margin: 50px auto; padding: 20px; max-width: 1200px;">
       <h1 style="color: white;">Productos</h1>
       <% (1..7).each do |i| %>
         <div class="product-container">
@@ -60,7 +74,7 @@
     </div>
 
     <!-- Derechos reservados -->
-    <footer style="margin-top: 30px; font-size: 14px; color: #ccc; text-align: center;">
+    <footer>
       &copy; 2024 Del Campo Foods - Allpacuna. Todos los derechos reservados.
     </footer>
   </body>
