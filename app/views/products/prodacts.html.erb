@@ -83,6 +83,16 @@
           </div>
         </div>
       <% end %>
+      <% (1..5).each do |i| %>
+        <div class="product-container">
+          <div class="product-description">
+            <p>Ejemplo pulpa <%= i %>: ...</p>
+          </div>
+          <div class="product-image">
+            <img src="<%= asset_path("pulpa_#{i}.png") %>" alt="Pulpa <%= i %>">
+          </div>
+        </div>
+      <% end %>
     </div>
   </body>
 </html>
