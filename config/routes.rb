@@ -19,5 +19,5 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
 
   # Ruta para la página de contacto
-  get 'contact', to: 'pages#contact'
+  get 'contact', to: 'contacts#new'
 end
